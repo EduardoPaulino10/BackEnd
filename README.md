@@ -89,7 +89,7 @@ graph TD
 
 ### Como Funciona na Prática o BackEnd
 
-- **Ação do Usuário**************: Envia uma Solicitação pela UI(Interface do Usuário).
+- **Ação do Usuário**: Envia uma Solicitação pela UI(Interface do Usuário).
 Exemplo de UI: Tela do Celular, Navegador da internet, Alexa ...
 - **Envio da Requisição**: A UI transforma a ação do usuário em uma Requisição HTTP;
 - **O Processamento BackEnd**: o Código BackEnd recebe o pedido, valida os dados e decide o que fazer (Ex: consulta uma informação no banco de dados).
