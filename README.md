@@ -138,3 +138,61 @@ Criando um Hello, Word!!!
 - PHP Debug (Xdebug): Acha erros em Linha de Código
 - PHP CS FIXER: Formatação padrão do Código (Identação)
 - PHP Server: Sobre um Servidor Local para Acompanhamento em Tempo Real
+
+##### Estudo de Variáveis e Constantes em PHP
+
+Declarar variáveis é alocar um espaço na memoria que permite a inclusão e manipulação de dados.
+
+**Variáveis**
+
+- Devem ser declaradas usando "$" antes do nome da variável
+- Podem ser String, Númerica (Integer e Float), Booleanas e Nulas. Não Permite declaração de Undefined
+- São não tipadas (Não precisa declara o tipo na criação), a tipagem é atribuida ao adicionar o valor
+- Usar o "declare(strict_types=1);" na primeira linha do arquivo ; => blindar o sistema contra conflitos de tipos de variáveis
+
+**Constantes**
+- Não podem ser modificadas ou redeclaradas após a crição
+- Pode ser criada usando "const" ou "define"
+- Não permitem interpolação
+
+##### Estudo de Operadores
+
+**Aritméticos**: São usados para Realizar Cálculos.
+
+| Operador | Nome | Exemplo | Resultado |
+| - | - | - | - |
+| + | Adição | 10 + 5 | 15 |
+| - | Subtração | 10 - 5 | 5 |
+| * | Multiplicação | 10 * 5 | 50 |
+| / | Divisão | 10 / 5 | 2 |
+| % | Módulo (Resto) | 10 % 3 | 1 (10 div 3 da 3, sobra 1 )
+| ** | Expoente | 2 ** 3 | 8(2 elevado a 3)
+
+Obs: O Operador % é o melhor amigo de um programador, permite ordenar listas e organizar filas e pilhas
+
+**Relacionais**: Permitem uma Comparação entre dois ou mais valores, o resultado de uma operação relacional é sempre uma boleana (true , false)
+
+| Nomes | Operador | Exemplo | Resultado |
+| - | - | - | - |
+| Iguais | == | "10"==10 | true | 
+| Igualdade Estrita | === | "10"===10 | false | 
+| Diferente | != | "10"!=10 | false |
+| Diferença Estrita | !== | "10"!==10 | true |
+| Maior que | > | 18 > 18 | false |
+| Menor que | < | 10 < 20 | true |
+| Maior ou Igual | >= | 18 >= 18 | true |
+| Menor ou igual | <= | 10 <= 5 | false |
+
+**Lógicos**: Permite a Combinação entre sentenças.
+
+- Operador AND (E) => && : para o resultado se verdaddeiro, TODAS as Combinações precisam ser verdadeiras
+    - true && true => true
+    - true && false => false
+
+- Operador OR (OU) => || : para o resultado ser verdadeiro , Basta APENAS UMA condição ser verdadeira
+    - false || true => true
+    - false || false => false
+
+- Operador NOT (Não) => ! : Inverte a lógica da Sentença
+    - !true => false
+    - !false => true
