@@ -273,3 +273,38 @@ if($valorCompra > 200){
 }
 
 ```
+
+*obs*: Sempre usar `elseif` para situações que precisam de mais de uma condição, ou seja, fazer encadeamento das condições
+
+##### Operadores Ternários
+Um atalho para estrutura condicional `if/else`, normalmente escrito em uma unica linha do código
+
+` condição  ? verdadeira : falso `
+
+Perfeito para decições curtas de uma linha de comando
+Exemplo: Verificar se Pessoa é Maior de Idade (18)
+
+```php
+
+$idade = 20;
+//O formato é : (Condição) ? Verdadeiro : Falso;
+
+$status = ($idade >= 18) ? "Maior de Idade" : "Menor de Idade";
+
+```
+
+##### Expressão Condicional `match` (PHP 8)
+No mercado de PHP atual mão se usa mais uma dezena de `if/else` para checar valores fixos, e o antigo `switch/case` caiu em desuso. Usamos o `match`. Ele compara um valor e retorna diretamente o resultado.
+
+
+```mermaid
+graph TD
+    A[valor] --> B{Condicional}
+    B --> C[Ação 1]
+    B --> D[Ação 2]
+    B --> E[Ação 3]
+    B --> F[Ação 4]
+    B --> G[...]
+    B --> H[Ação default]
+
+```
