@@ -155,6 +155,10 @@ Declarar variáveis é alocar um espaço na memoria que permite a inclusão e ma
 - Pode ser criada usando "const" ou "define"
 - Não permitem interpolação
 
+---
+
+### Semana 2 - Operadores em PHP (Aritméticos, Relacionais e Lógicos)
+
 ##### Estudo de Operadores
 
 **Aritméticos**: São usados para Realizar Cálculos.
@@ -185,7 +189,7 @@ Obs: O Operador % é o melhor amigo de um programador, permite ordenar listas e 
 
 **Lógicos**: Permite a Combinação entre sentenças.
 
-- Operador AND (E) => && : para o resultado se verdaddeiro, TODAS as Combinações precisam ser verdadeiras
+- Operador AND (E) => && : para o resultado se verdadeiro, TODAS as Combinações precisam ser verdadeiras
     - true && true => true
     - true && false => false
 
@@ -196,3 +200,76 @@ Obs: O Operador % é o melhor amigo de um programador, permite ordenar listas e 
 - Operador NOT (Não) => ! : Inverte a lógica da Sentença
     - !true => false
     - !false => true
+
+### Semana 3 - Estrutura de Controle de Dados ( Condicionais e Repetição)
+
+- **Conteúdo**: Estruturas `if`, `else`, `elseif`, operadores ternários, `match` => substituto do `swicth/case`, loops `for`, `while`, `do-while` e `foreach`
+
+#### Estrutura de Controle de Dados ajudam no processo de automatização em programas e sistemas
+
+##### Condicionais (IF, ELSE, ELSEIF)´
+
+**Forma de Uso**:
+
+- Uso do `if` apenas: 
+Exemplo: aplicar um desconto de 10% em comrpas acima de 100 Reais;
+
+```mermaid
+
+graph LR
+    A[Comando] --> B[Condição] --> C[Tomada de Decisão]
+
+```
+
+```php
+if ($valorCompra > 100) {
+    $valorCompra = $valorCompra * 0.1
+}
+```
+
+- Uso do `if` e do `else`
+Exemplo: Aplicar um desconto de 10% para compras acima de 100 reais e 5% para as demais compras
+
+```mermaid
+
+graph LR 
+
+    A[Comando] --> B{Condição}
+    B --> |true| C[Ação 1]
+    B --> |false| D[Ação 2]
+```
+
+```php
+if($valorCompra > 100) {
+    $valorFinal = $valorCompra*0.1;
+} else {
+    $valorFinal = $valorCompra*0.05
+}
+
+```
+
+- Uso do `elseif` (Encadeado)
+Exemplo: Compras acima de 200 Reais tem 15% de desconto, acima de 100 reais tem 10% de desconto e outras 5% de desconto
+
+```mermaid
+
+graph LR
+    A[Comando] --> B{Condição}
+    B --> |true| C[Ação 1]
+    B --> |false| D{Condição 2}
+    D --> |true| E[Ação 2]
+    D --> |false| F[Ação 3]
+
+```
+
+```php 
+
+if($valorCompra > 200){
+    $valorFinal = $valorCompra*0.85;
+} elseif($valorCompra >100) {
+    $valorFinal - $valorCompra*0.9;
+} else {
+    $ valorFinal = $valorCompra*0.95;
+}
+
+```
