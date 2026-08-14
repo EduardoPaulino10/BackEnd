@@ -276,6 +276,24 @@ if($valorCompra > 200){
 
 *obs*: Sempre usar `elseif` para situações que precisam de mais de uma condição, ou seja, fazer encadeamento das condições
 
+- Uso **ERRADO** do if
+
+Não fazer o encadeamento de condicionais
+
+```php
+
+if($valorCompra > 200) {
+    $valorFinal = $valorCompra*0.85;
+}
+if($valorCompra > 100) {
+    $valorFinal = $valorCompra*0.90;
+}
+if($valorCompra < 100) {
+    $valorFinal = $valorCompra*0.95;
+}
+
+```
+
 ##### Operadores Ternários
 Um atalho para estrutura condicional `if/else`, normalmente escrito em uma unica linha do código
 
@@ -290,6 +308,8 @@ $idade = 20;
 //O formato é : (Condição) ? Verdadeiro : Falso;
 
 $status = ($idade >= 18) ? "Maior de Idade" : "Menor de Idade";
+$status2 = ($idade<18) ? "Criança" : ($idade<60) ? "Adulto" : "Idoso";
+
 
 ```
 
@@ -308,3 +328,27 @@ graph TD
     B --> H[Ação default]
 
 ```
+
+
+```php
+
+$diaSemana = date("Week"); //Pega o dia da semana em formato numérico
+
+// Transforma o dia da semana em formato texto (Domingo, Segunda,...)
+
+$nomeDiaSemana = match($diaSemana){
+    "0" => "Domingo",
+    "1" => "Segunda",
+    "2" => "Terça",
+    "3" => "Quarta",
+    "4" => "Quinta",
+    "5" => "Sexta",
+    "6" => "Sábado",
+    "default" => "Dia Inválido"
+};
+
+
+
+```
+
+
