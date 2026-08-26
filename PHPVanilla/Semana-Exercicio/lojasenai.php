@@ -31,13 +31,11 @@ do {
  
 } while ($opcao != 4 && $opcao != 0); 
  
-foreach ($produtos as $produto) { 
-    echo $produto["nome"] . " | R$ " . $produto["preco"] . " - " . $produto["estoque"] . "<br>"; 
-} 
-
-
-
-
-
+foreach ($produtos as $codigo => $produto) {
+    echo $codigo . " - ";
+    echo $produto["nome"] . " | R$ ";
+    echo $produto["preco"] . " | Estoque: ";
+    echo $produto["estoque"] . "<br>";
+}
 
 ?>
